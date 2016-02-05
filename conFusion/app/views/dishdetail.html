@@ -21,10 +21,10 @@
                 </div>
             </div>
             <div class="col-xs-9 col-xs-offset-1">
-                <h4>Customer Comments<label class="label small">Sort by:</label><input class="small" ng-model="order"></h4>
-                <div ng-repeat="comment in dish.comments | orderBy:order">
+                <h4>Customer Comments<label class="label small">Sort by:</label><input class="small" ng-model="orderText"></h4>
+                <div ng-repeat="comment in dish.comments | orderBy:orderText">
                     <blockquote>
-                        <p>{{comment.rating}} Stars {{orderBy}}</p>
+                        <p>{{comment.rating}} Stars</p>
                         <p>{{comment.comment}}</p>
                         <footer>{{comment.author}}, {{comment.date | date}}</footer>
                     </blockquote>
